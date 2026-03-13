@@ -1,0 +1,119 @@
+@import '../../global.scss';
+
+.services-page {
+  padding: 120px 8%;
+  background: #000; // Deep Black
+  position: relative;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+
+    .badge {
+      color: $primary-purple;
+      background: rgba($primary-purple, 0.1);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: #fff;
+      margin-top: 20px;
+      line-height: 1.2;
+      .purple { color: $primary-purple; }
+    }
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba($primary-purple, 0.3);
+      
+      .icon-wrapper {
+        background: $primary-purple;
+        color: #fff;
+        transform: rotateY(360deg);
+      }
+
+      .card-bg-glow {
+        opacity: 0.6;
+      }
+    }
+
+    .icon-wrapper {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.05);
+      color: $primary-purple;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      transition: 0.6s;
+      
+      .icon { width: 30px; height: 30px; }
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    p {
+      color: #9ca3af;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      li {
+        color: #d1d5db;
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span { color: $primary-purple; font-weight: bold; }
+      }
+    }
+
+    .card-bg-glow {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 100px;
+      height: 100px;
+      background: $primary-purple;
+      filter: blur(50px);
+      border-radius: 50%;
+      opacity: 0;
+      transition: 0.5s;
+      pointer-events: none;
+    }
+  }
+}

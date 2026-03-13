@@ -1,0 +1,54 @@
+// ---------------------------------------------------------
+// 🚀 THEME: TAZENIX INSPIRED MIDNIGHT AGENCY
+// ---------------------------------------------------------
+
+// 1. Primary Colors (Main Brand)
+$primary-purple:    #8b5cf6;       // Vibrant Purple (Buttons & Highlights)
+$primary-cyan:      #22d3ee;       // Performance Bar & Sub-accents
+$primary-glow:      rgba(139, 92, 246, 0.5);
+
+// 2. Background Palette (The Dark Layering)
+$bg-dark-deep:      #050505;       // Absolute Black for the very base
+$bg-dark-main:      #0b0a1a;       // Deep Navy/Purple tint for sections
+$bg-surface:        rgba(22, 22, 34, 0.6); // Glassmorphism cards background
+$bg-gradient:       radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(34, 211, 238, 0.08) 0%, transparent 50%);
+
+// 3. Typography & Text
+$text-bright:       #ffffff;       // Headings
+$text-body:         #9ca3af;       // Descriptions (Grayish)
+$text-dim:          #6b7280;       // Small metadata/labels
+
+// 4. Borders & Glass Effects
+$border-glass:      1px solid rgba(255, 255, 255, 0.08);
+$border-purple:     1px solid rgba(139, 92, 246, 0.3);
+$radius-xl:         24px;          // Rounded corners for big sections
+$radius-md:         12px;          // Small badges and buttons
+
+// 5. Shadows & Performance Glows
+$shadow-deep:       0 20px 50px rgba(0, 0, 0, 0.6);
+$glow-purple:       0 0 30px rgba(139, 92, 246, 0.2);
+$glow-cyan:         0 0 20px rgba(34, 211, 238, 0.3);
+
+// 6. Transition
+$transition-fast:   all 0.2s ease;
+$transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* এটি এলিমেন্টের উইডথ ঠিক রাখে */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* ডানে বাড়তি স্ক্রল বন্ধ করবে */
+    min-height: 100vh;
+    background-color: #0f172a; /* তোমার থিমের ডার্ক কালারটা এখানে দাও */
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
